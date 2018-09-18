@@ -1,0 +1,24 @@
+<p>  {{ message }} </p>
+<hr>
+<p>  Number of logs : {{ fwlogs.length }} </p>  
+<hr>
+<table>
+<tr>
+<th>Duration</th>
+<th>Message #</th>
+<th>Request</th>
+<th>Response</th>
+<th>Source Name</th>
+<th>User Id</th>
+<th></th>
+</tr>
+<tr *ngFor="let fwlog of fwlogs | sort ">
+<td>{{fwlog.duration}}</td>
+<td>{{fwlog.msgId}}</td>
+<td>{{fwlog.req}}</td>
+<td>{{fwlog.res}}</td>
+<td>{{fwlog.sourceName}}</td>
+<td>{{fwlog.userId}}</td>
+<td> </td>
+</tr>
+</table>
